@@ -1,11 +1,21 @@
-function insert(num) 
-{
+function zerar(){
+    document.getElementById('resultado').innerHTML = ""
+}
+
+
+function insert(num) {
+
+    const displayElement = document.getElementById('resultado');
+
+    if (displayElement.innerHTML === "0") {
+      zerar()
+    }
  var numero = document.getElementById('resultado').innerHTML
  document.getElementById('resultado').innerHTML = numero + num
 }
 
 function clean(){
-    document.getElementById('resultado').innerHTML = ""
+    document.getElementById('resultado').innerHTML = 0
 }
 
 function back(){
@@ -14,8 +24,9 @@ function back(){
 }
 
 function calcular(){
+    
     var resultado = document.getElementById('resultado').innerHTML;
-    if(resultado ){
+    if(resultado){
         document.getElementById('resultado').innerHTML = eval(resultado)
     }
 }
