@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Formulário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="screen">
+        <div class="leftside">
+            <img src="images/logo-c2c_top-cc.png" alt="" />
+        </div>
+        <div class="rightside">
+            <h1>Crie uma conta</h1>
+
+            <form method="POST" action="cadastro.php" class="b7validator">
+                <label>
+                    <p>Seu nome:<br/></p>
+                    <input type="text" name="name" data-rules="required|min=2" />
+                </label>
+                <label>
+                    <p>Seu e-mail:<br/></p>
+                    <input type="text" name="email" data-rules="required|email" />
+                </label>
+                <label>
+                    <p>Sua senha:<br/></p>
+                    <input type="password" name="password" data-rules="min=4" />
+                </label>
+                <label>
+                    <input type="submit" value="Cadastrar" />
+                </label>
+            </form>
+
+            <div class="cont">
+                <div>
+                    Faça login com: <br><br>
+                    <a  class="logo" href=""><img src="images/facebook.png" alt=""></a>
+                    <a  class="logo" href=""><img src="images/twitter.png" alt=""></a>
+                    <a  class="logo" href=""><img src="images/google.png" alt=""></a>
+                </div>
+            </div>
+
+            <div class="login">
+                <p>Já tem uma conta? <a href="">Faça o Login</a></p>
+            </div>          
+            
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
